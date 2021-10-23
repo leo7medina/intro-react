@@ -2,15 +2,15 @@ import React from "react";
 import './TodoCounter.css'
 
 
-const estilos = {
+/*const estilos = {
     color: 'red',
     backgrounColor: 'yellow'
-};
+};*/
 
-function TodoCounter() {
+function TodoCounter( {total, completed}) {
     return (
         {/*<h2 style={estilos}>Has Completado 2 de 3 TODOs</h2>*/},
-        <h2 className="TodoCounter">Has Completado 2 de 3 TODOs</h2>
+        <h2 className="TodoCounter">Has Completado {completed} de {total} TODOs</h2>
     );
 }
 
