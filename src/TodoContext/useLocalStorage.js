@@ -19,6 +19,7 @@ function useLocalStorage(itemName, initValue) {
           setItem(parsedItem);
           setLoading(false);
         } catch(error) {
+          console.log('use effect error', error);
           setError(error);
         }
       }, 3000);
@@ -27,9 +28,10 @@ function useLocalStorage(itemName, initValue) {
     const saveItem = (newITem) => {
         try{
           const stringFielItem = JSON.stringify(newITem);
-          localStorage.setItem(stringFielItem);
+          localStorage.setItem(itemName, stringFielItem);
           setItem(newITem);
         } catch (error) {
+          console.log(error);
           setError(error);
         }
     };
