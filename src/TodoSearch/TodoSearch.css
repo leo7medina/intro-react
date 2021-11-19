@@ -1,5 +1,17 @@
 .TodoSearch {
-    background: #F9FBFC;
+    width: calc(100% - 62px);
+    font-size: 24px;
+    background: #7bb1cc;
+    border-radius: 8px;
+    border: 2px solid #d7bf19;
+    text-align: center;
+    margin: 0;
+    height: 50px;
+    color: #1E1E1F;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    /**background: #F9FBFC;
     border-radius: 2px;
     border: 2px solid #202329;
     margin: 0 24px;
@@ -10,7 +22,7 @@
     font-family: 'Montserrat';
     font-weight: 400;
     color: #1E1E1F;
-    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);*/
   }
   
   .TodoSearch::placeholder {
@@ -20,5 +32,5 @@
   }
   
   .TodoSearch:focus {
-    outline-color: #61DAFA;
+    outline-color: transparent;
   }
