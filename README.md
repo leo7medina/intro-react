@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# App Intro React
+
+Project guide on the introduction to react.
+
+Avaible: https://leo7medina.github.io/intro-react/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
