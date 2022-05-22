@@ -1,4 +1,4 @@
-# App Intro React
+# Intro React
 
 Project guide on the introduction to react.
 
