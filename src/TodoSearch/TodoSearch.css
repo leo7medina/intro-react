@@ -34,3 +34,7 @@
   .TodoSearch:focus {
     outline-color: transparent;
   }
+
+  .TodoSearch:disabled {
+    opacity: 25%;
+  }
