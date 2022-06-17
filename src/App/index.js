@@ -12,6 +12,8 @@ import { TodosLoading } from "./../TodosLoading";
 import { Modal } from "./../Modal";
 import { TodoForm } from "./../TodoForm";
 import { CreateTodoButton } from "./../CreateTodoButton";
+import { TodosError} from "./../TodosError";
+import { EmptyTodos} from "./../EmptyTodos";
 
 /**const defaultTodos = [
  { text: 'Cortar cebolla', completed: true},
@@ -45,8 +47,25 @@ function App() {
           <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue}/>
       </TodoHeader>
       
+      <TodoList
+        error={error}
+        loading={loading}
+        searchedTodos={searchedTodos}
+        onError={() => <TodosError />}
+        onLoading={() => <TodosLoading />}
+        onEmptyTodos={() => <EmptyTodos />}
+        render={todo => (
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
+        )}
+      />
 
-      <TodoList>
+      {/* <TodoList>
           {error && <p>Desesperate, hubo un error</p>}
           {loading && <TodosLoading />}
           {(!loading && !searchedTodos.length) && <p>¡Crea tu primer TODO!</p>}
@@ -60,7 +79,7 @@ function App() {
                 onDelete={() => deleteTodo(todo.text)} 
             />
           ))}
-      </TodoList>
+      </TodoList> */}
       
       {!!openModal && (
         <Modal>
