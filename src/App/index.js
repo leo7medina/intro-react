@@ -14,6 +14,7 @@ import { TodoForm } from "./../TodoForm";
 import { CreateTodoButton } from "./../CreateTodoButton";
 import { TodosError} from "./../TodosError";
 import { EmptyTodos} from "./../EmptyTodos";
+import { ChangeAlert } from "../ChangeAlert";
 
 /**const defaultTodos = [
  { text: 'Cortar cebolla', completed: true},
@@ -35,7 +36,8 @@ function App() {
     completedTodos,
     searchValue, 
     setSearchValue,
-    addTodo
+    addTodo,
+    sincronizeTodos
 } = useTodos();
 
   return (
@@ -111,7 +113,8 @@ function App() {
       )}
 
       <CreateTodoButton openModal={openModal} setOpenModal={setOpenModal} />
-  
+
+      <ChangeAlert sincronize={sincronizeTodos} />
     </React.Fragment>
   );
 }
